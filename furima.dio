@@ -1,0 +1,46 @@
+<mxfile host="65bd71144e" modified="2021-03-04T05:29:54.827Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.0 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="NfJCdOOIbjH6mN76W3Bn" type="embed">
+    <diagram id="AT9AscaFW_W7n0UWjT6E" name="ページ1">
+        <mxGraphModel dx="755" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Usersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="100" width="220" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="+ nickname : string型&#10;+ email : string型&#10;+ password : string型&#10;+ last_name : string型&#10;+ first_name : string型&#10;+ year : integer型&#10;+ month : integer&#10;+ day : integer" style="align=left;strokeColor=#666666;fillColor=#f5f5f5;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#333333;" vertex="1" parent="3">
+                    <mxGeometry y="30" width="220" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Itemsテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="110" width="250" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="+ image : Active Strageで実装&#10;+ item : string型&#10;+ text : text型&#10;+ price : integer型&#10;+ category : string型&#10;+ status : string型&#10;+ charge : string型&#10;+ area : sring型&#10;+ days : integer型&#10;+ user_id references型" style="align=left;strokeColor=#666666;fillColor=#f5f5f5;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#333333;" vertex="1" parent="32">
+                    <mxGeometry y="30" width="250" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Ordersテーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=20;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="440" width="240" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="+ user_id : references型&#10;+ item_id : references型&#10;+ card_number : integer型&#10;+ month : integer型&#10;+ year : integer型&#10;+ security_cord : integer型&#10;+ postal_cord : integer型&#10;+ prefecture : string型&#10;+ city : string型&#10;+ address : string型&#10;+ building_name : string型&#10;+ phone_number : integer型" style="align=left;strokeColor=#666666;fillColor=#f5f5f5;spacingLeft=4;fontSize=18;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#333333;" vertex="1" parent="34">
+                    <mxGeometry y="30" width="240" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;entryX=-0.004;entryY=0.117;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.017;exitY=0.212;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="4" target="33">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="300" y="330" as="sourcePoint"/>
+                        <mxPoint x="430" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERzeroToOne;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="35">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="380" y="370" as="sourcePoint"/>
+                        <mxPoint x="280" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToOne;startArrow=ERmandOne;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="35" target="33">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="364" y="390" as="sourcePoint"/>
+                        <mxPoint x="464" y="290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
