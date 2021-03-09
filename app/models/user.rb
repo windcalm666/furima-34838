@@ -22,4 +22,6 @@ class User < ApplicationRecord
     validates :last_name_read, presence: true
     validates :first_name_read, presence: true
   end
+
+  has_many :items
 end
