@@ -3,11 +3,11 @@ class OrderAddress
   attr_accessor :postal_cord, :prefecture_id, :city, :address, :building_name, :phone_number, :user_id, :item_id
 
   with_options presence: true do
-    validates :postal_cord
+    validates :postal_cord, format: { with: /\A\d{3}[-]\d{4}\z/, message: "Input correctly" }
     validates :prefecture_id, numericality: { other_than: 1, message: "Select" }
     validates :city
     validates :address
-    validates :phone_number
+    validates :phone_number, format: { with: /\d{10,11}/ }
     validates :user_id
     validates :item_id
   end
