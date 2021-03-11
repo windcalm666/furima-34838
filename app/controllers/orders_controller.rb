@@ -4,6 +4,9 @@ class OrdersController < ApplicationController
   before_action :sold_out_redirect_user
 
   def index
+    if user_signed_in? && current_user == @item.user_id
+      redirect_to root_path
+    end
     @order_address = OrderAddress.new
   end
 
