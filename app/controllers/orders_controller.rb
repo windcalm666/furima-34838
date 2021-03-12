@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   before_action :sold_out_redirect_user
 
   def index
-    if current_user == @item.user_id
+    if current_user.id == @item.user_id
       redirect_to root_path
     end
     @order_address = OrderAddress.new
